@@ -1,2 +1,8 @@
 image:
   file: .gitpod.dockerfile
+
+tasks:
+   - init: |
+       go get -v ./...
+       go test ./...
+       golangci-lint run
